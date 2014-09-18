@@ -1,5 +1,10 @@
 Программа для тестирования правильности декодера ACM для libfalltergeist.
 
+# Зависимости
+
+* SDL
+* SDL_mixer
+* libfalltergeist (подмодуль)
 
 # Сборка
 
