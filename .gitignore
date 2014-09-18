@@ -5,4 +5,4 @@ CMakeFiles/*
 cmake_install.cmake
 lib/libfalltergeist/*
 Makefile
-acm2wav
+acmplayer
