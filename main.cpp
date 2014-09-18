@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_mixer.h>
 #include <cassert>
+#include <stdexcept>
 
 namespace fall = libfalltergeist;
 
