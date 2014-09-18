@@ -66,7 +66,8 @@ public:
         auto acm = std::dynamic_pointer_cast<fall::AcmFileType>(_datFile.item(path));
         acm->init();
 
-        auto bitrate = acm->bitrate();
+        // FIXME: hack to fix double playback speed
+        auto bitrate = acm->bitrate() / 2;
         auto cnt = acm->samples();
         auto channels = acm->channels();
 
@@ -94,10 +95,10 @@ public:
         auto channel = Mix_PlayChannel(-1, chunk, 0);
         if(channel == -1)
         {
-            throw std::runtime_error("Unable to play ACM file");
+            throw std::runtime_error(std::string("Unable to play ACM file: ") + Mix_GetError());
         }
 
-        while(Mix_Playing(channel) != 0); // Wail until finished
+        while(Mix_Playing(channel) != 0); // Wait until finished
         Mix_FreeChunk(chunk);
     }
 };
