@@ -17,7 +17,6 @@ void usage(std::string programName)
 class AcmPlayer
 {
 private:
-    std::string _dat;
     fall::DatFile _datFile;
     Uint16 _audio_format;
     int _audio_channels;
@@ -46,7 +45,7 @@ private:
 
 public:
     AcmPlayer(std::string dat)
-            : _dat(dat), _datFile(dat)
+            : _datFile(dat)
     {
         assert(SDL_Init(SDL_INIT_AUDIO) == 0);
         assert(Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 8192) == 0);
