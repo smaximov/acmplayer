@@ -1,0 +1,8 @@
+.idea/
+CMakeCache.txt
+CMakeLists.txt.user
+CMakeFiles/*
+cmake_install.cmake
+lib/libfalltergeist/*
+Makefile
+acm2wav

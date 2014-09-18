@@ -1,0 +1,3 @@
+[submodule "lib/libfalltergeist"]
+	path = lib/libfalltergeist
+	url = git@github.com:smaximov/libfalltergeist.git
