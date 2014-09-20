@@ -72,7 +72,7 @@ public:
         auto channels = acm->channels();
 
         short *memory = (short *)malloc(cnt * 2);
-        auto cnt1 = acm->read_samples(memory, cnt)*2;
+        auto cnt1 = acm->readSamples(memory, cnt)*2;
 
         SDL_AudioCVT cvt;
         SDL_BuildAudioCVT(&cvt, AUDIO_S16SYS, channels, bitrate, _audio_format, _audio_channels, _audio_bitrate);
